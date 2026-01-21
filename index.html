@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OUTSEE | Moda Contemporânea</title>
+
+  <!-- Fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      scroll-behavior: smooth;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 60px;
+      border-bottom: 1px solid #eaeaea;
+      z-index: 1000;
+    }
+
+    .logo {
+  width: 150px;
+  height: 40px;
+}
+
+}
+
+}
+
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+    }
+
+    nav ul li {
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+    }
+
+    nav ul li::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #000;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav ul li:hover::after {
+      width: 100%;
+    }
+
+    /* SEÇÕES */
+    section {
+      padding: 140px 60px;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .hero button {
+      padding: 15px 40px;
+      background: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      opacity: 0.8;
+    }
+
+    /* COLEÇÃO */
+    .collection h2 {
+      font-size: 36px;
+      margin-bottom: 60px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+    }
+
+    .product-card {
+      border: 1px solid #eaeaea;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 300px;
+      background: #f2f2f2;
+      margin-bottom: 20px;
+    }
+
+    .product-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .product-card button {
+      width: 100%;
+      padding: 12px;
+      background: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .product-card button:hover {
+      opacity: 0.8;
+    }
+
+    /* SOBRE */
+    .about p {
+      max-width: 700px;
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 40px 60px;
+      border-top: 1px solid #eaeaea;
+      font-size: 14px;
+      color: #777;
+      text-align: center;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      header {
+        padding: 0 20px;
+      }
+
+      section {
+        padding: 120px 20px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <!-- SUBSTITUA ESSE TEXTO PELA LOGO -->
+    <div class="brand">
+  <img src="Letreiro1.jpeg" alt="OUTSEE Logo" class="logo">
+</div>
+
+    <nav>
+      <ul>
+        <li onclick="scrollToSection('home')">Home</li>
+        <li onclick="scrollToSection('collection')">Coleção</li>
+        <li onclick="scrollToSection('about')">Sobre</li>
+        <li onclick="scrollToSection('contact')">Contato</li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>OUTSEE</h1>
+      <p>Moda contemporânea para quem vive além do óbvio. Estilo urbano, identidade e atitude.</p>
+      <button onclick="scrollToSection('collection')">VER COLEÇÃO</button>
+    </div>
+  </section>
+
+  <!-- COLEÇÃO -->
+  <section class="collection" id="collection">
+    <h2>Coleção</h2>
+
+    <div class="products">
+      <div class="product-card">
+        <img src="1aa.png" alt="Camiseta OUTSEE" class="product-image">
+        <h3>Camiseta OUTSEE Blood</h3>
+        <p>R$ 129,90</p>
+        <button>Ver detalhes</button>
+      </div>
+
+      <div class="product-card">
+        <img src="1cc.png" alt="Camiseta OUTSEE" class="product-image">
+        <h3>Camiseta OUTSEE Sócios</h3>
+        <p>R$ 129,90</p>
+        <button>Ver detalhes</button>
+      </div>
+
+      <div class="product-card">
+        <img src="1bb.png" alt="Camiseta OUTSEE" class="product-image">
+        <h3>Calça OUTSEE Angels</h3>
+        <p>R$ 279,90</p>
+        <button>Ver detalhes</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about" id="about">
+    <h2>Sobre a OUTSEE</h2>
+    <p>
+      A OUTSEE nasce da ideia de ultrapassar limites e criar peças que representam liberdade, identidade e estilo urbano contemporâneo.
+      Cada detalhe é pensado para quem vive a moda como expressão pessoal.
+    </p>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contact">
+    <h2>Contato</h2>
+    <p>Email: outseecontato@gmail.com<br>Instagram: @outsee1</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 OUTSEE. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
